@@ -4,25 +4,24 @@ const Calculator = () => {
 
     const values = ['7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', '0', '.', '=', '+'];
 
-    const operations = {
-        '+': (a, b) => a + b,
-        '-': (a, b) => a - b,
-        '*': (a, b) => a * b,
-        '/': (a, b) => b !== 0 ? a / b : 'Error: Division by zero',
-    }
+    // const operations = {
+    //     '+': (a, b) => a + b,
+    //     '-': (a, b) => a - b,
+    //     '*': (a, b) => a * b,
+    //     '/': (a, b) => b !== 0 ? a / b : 'Error: Division by zero',
+    // }
 
     const [display, setDisplay] = useState('');
 
     const handleClick = (value) => {
-        setDisplay(prev => prev + value.toString())
+        setDisplay(prev => prev + value.toString());
     }
     const handleClear = () => {
         setDisplay('');
     }
 
     const calculateResult = (value) => {
-      // setDisplay(eval(display))
-
+        setDisplay(eval(display));
     }
 
     return (
